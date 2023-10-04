@@ -172,17 +172,16 @@ if (cadena != null && cadena.length > 0) {
  * Dad un aexpresion booleana con las tres variables de tal manera que sea cierta si y solo si la ciudad es una metropolis
  */
 
-let esCapital = false; //boolean
-let numCiudadanos = 100000; //int
-let impuestoPorCiudadadno = 3600; //float
+let esCapital = true; //boolean
+let numCiudadanos = 100001; //int
+let impuestoPorCiudadadno = 36000; //float
 
 if (
-  esCapital == true &&
-  numCiudadanos >= 100000 &&
-  numCiudadanos < 200000 &&
-  (impuestoPorCiudadadno = numCiudadanos * 12) > 3600
+  (esCapital == true && numCiudadanos >= 100000) ||
+  (numCiudadanos < 200000 &&
+    (impuestoPorCiudadadno = numCiudadanos * 12) > 3600)
 ) {
-  console.log(true);
+  console.log("verdadero");
 } else {
-  console.log(false);
+  console.log("falso");
 }
