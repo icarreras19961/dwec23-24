@@ -162,8 +162,50 @@ if (mediana2020 >= 30) {
 }
 
 //la respuesta que sale en la teminal
-console.log("El año 2010 tubo de media: "+ mediana2010+ " celsius, "+ mediana2010Far+" Farhengeit, " +mediana2010Kel+" kelvin. Supero los 30º? "+supera2010 );
+console.log(
+  "El año 2010 tubo de media: " +
+    mediana2010 +
+    " celsius, " +
+    mediana2010Far +
+    " Farhengeit, " +
+    mediana2010Kel +
+    " kelvin. Supero los 30º? " +
+    supera2010
+);
 
-console.log("El año 2015 tubo de media: "+ mediana2015+ " celsius, "+ mediana2015Far+" Farhengeit, " +mediana2015Kel+" kelvin. Supero los 30º? "+supera2015 );
+console.log(
+  "El año 2015 tubo de media: " +
+    mediana2015 +
+    " celsius, " +
+    mediana2015Far +
+    " Farhengeit, " +
+    mediana2015Kel +
+    " kelvin. Supero los 30º? " +
+    supera2015
+);
 
-console.log("El año 2020 tubo de media: "+ mediana2020+ " celsius, "+ mediana2020Far+" Farhengeit, " +mediana2020Kel+" kelvin. Supero los 30º? "+supera2020 );
+console.log(
+  "El año 2020 tubo de media: " +
+    mediana2020 +
+    " celsius, " +
+    mediana2020Far +
+    " Farhengeit, " +
+    mediana2020Kel +
+    " kelvin. Supero los 30º? " +
+    supera2020
+);
+
+/*
+
+FECHAS
+
+*/
+
+let parrafo = document.getElementById("fecha");
+
+// new date();
+// new date(milisegundos);
+// new date (año, mes, dia, horas, minutos, milisegundos);
+
+let fecha = new Date(71,11,29,15,15,15);
+parrafo.innerHTML = fecha.getMonth();
