@@ -209,3 +209,4 @@ let parrafo = document.getElementById("fecha");
 
 let fecha = new Date(71,11,29,15,15,15);
 parrafo.innerHTML = fecha.getMonth();
+let patata;
