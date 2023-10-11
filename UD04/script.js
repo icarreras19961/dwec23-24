@@ -127,12 +127,91 @@ for (let fila = 0; fila < tablaMultiplicar.length; fila++) {
 }
 console.log(tablaMultiplicar);
 
-
 for (let fila = 0; fila < tabla.length; fila++) {
-  console.log("La tabla del : ",fila);
+  console.log("La tabla del : ", fila);
   for (let columna = 0; columna < tabla.length; columna++) {
     if (!(tablaMultiplicar[fila][columna] % 2 === 0)) {
-      console.log(fila,"*",columna,"=",tablaMultiplicar[fila][columna]);
+      console.log(fila, "*", columna, "=", tablaMultiplicar[fila][columna]);
     }
   }
 }
+
+//Metodos de arrays
+//push()
+//pop() elimina el ultimo elemento del array y lo DEVUELVE
+
+let paco = ["joan", "amparo", "esther"];
+let otros = ["valentin", "pepe"];
+console.log(paco);
+
+// let elemntoEliminado = paco.pop();
+// console.log(paco);
+// console.log(elemntoEliminado);
+
+//shift() Elimina el PRIMER elemento y lo devuelve
+// elemntoEliminado = paco.shift();
+
+//unshift() Agrega uno o mas elementos al principio
+// paco.unshift("valentin", "pepe");
+
+//concat() Combina 2 o mas arrays y devuelve uno nuevo
+// let combinacion = paco.concat(paco, otros);
+// console.log(combinacion);
+
+//slice() devuelve una copia superficial de una porcion del array
+// let copiaPaco = paco.slice(1,5);
+// console.log(copiaPaco);
+
+//splice() Cambia el contenido de un array eliminando, remplazando o agregando elementos
+// paco.splice(1, 0, ...otros);
+// (posicion donde se ejecuta, la cantidad a eliminar, contenido a añadir)
+
+//indexOf() Devuelve el primer indice en el que se encuentra un elemento dado. Devuelve -1 si no lo encuentra (en que posicion se encuentra el valor que queremos)
+/*
+let indice = paco.indexOf("amparo");
+let cadena = "Hola como estas";
+indice = cadena.lastIndexOf("a")
+console.log(indice);
+indice = cadena.indexOf("a")
+console.log(indice);
+*/
+//join() une todos los elementos de un array en una cadena (utilizando un separador)
+//Puedes indicar la separacion dentro del parentesis del join()
+/**
+ *   let cadena = paco.join("->");
+ *   console.log(cadena);
+ */
+
+// sort() Ordena alfaveticamente arrays si son cadenas y numericamente si son numeros
+let otros2 = [3, "joan", 10, 5, true, -1, "pepe"];
+console.log(otros2.sort());
+
+let paco2 = ["joan", "amparo", "esther", "Zoraia", "Ángel"];
+//Ordenar correctamente con sort => uso de parametros
+// se trata de una funcion:
+// - Debe recibir valorers a comparar
+// - Como resultado debe.
+//   - Devolver un valor positivo (1) si el primer valor es superior al segundo
+//   - Devolver un valor negativo (-1) si el primer valor es inferior al segundo
+//   - Devolver un valor cero (0) si los 2 valores son iguales o equivalentes para la ordenacion
+
+// Sort en numeros
+let numeros = [10, 5, 8, 3, 1];
+console.log(numeros.sort((a, b) => a - b)); //funcion flecha
+
+//sort cadenas
+console.log(
+  paco2.sort((a, b) => {
+    return a.toLowerCase() > b.toLowerCase()
+      ? 1
+      : a.toLowerCase() < b.toLowerCase()
+      ? -1
+      : 0;
+  })
+);
+
+console.log(
+  paco2.sort((a, b) => {
+    return a.localeCompare(b);
+  })
+);
