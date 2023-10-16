@@ -215,3 +215,110 @@ console.log(
     return a.localeCompare(b);
   })
 );
+
+/**
+ * Funciones
+ */
+
+// function dihola() {
+
+//   console.log("hola");
+// }
+
+// dihola();
+console.log(multiplica(20, 30) + 1);
+function multiplica(c, d) {
+  let a = 10;
+  let b = 20;
+  return a * b * c * d;
+}
+
+/**
+ * Objetos
+ */
+
+let unCliente = {
+  nombre: "Peter",
+  apellido: "Jackson",
+  "direccion fiscal": "c/Desconocida",
+  "-+-+-+-+--": "bloked",
+  pago: {
+    tipo: "visa",
+    targeta: "1234567",
+    "fecha de caducidad": "nunca",
+  },
+  vencimiento: 30,
+};
+unCliente["vencimiento"] = 60;
+unCliente.pago.tipo = "mastercard";
+console.log(unCliente);
+
+//Metodos con elementos
+
+let estudiante = {
+  id: 2,
+  nombre: "ivan",
+  diHola: function () {
+    return "hola";
+  },
+  notas: [10, 0, 4],
+};
+
+function media(a, b, c) {
+  return (a + b + c) / 3;
+}
+console.log(
+  "El estudiante ",
+  estudiante.nombre,
+  " con la media ",
+  media(estudiante.notas[0], estudiante.notas[1], estudiante.notas[2]),
+  " te dice ",
+  estudiante.diHola()
+);
+
+estudiante.apellido = "carreras";
+estudiante.diAdios = function () {
+  return "adios";
+};
+console.log(estudiante);
+
+//this
+let factura = {
+  descripcion: "Factura de prueba",
+  precio: 100,
+  iva: 21,
+  subTotal: function () {
+    return this.precio;
+  },
+  total: function () {
+    return this.precio + (this.precio * this.iva) / 100;
+  },
+};
+console.log(factura);
+
+//Constructores
+
+function Web() {
+  this.url = "https://localhost";
+  this.nombre = "Localhost";
+
+  this.muestraInformacion = function () {
+    return "url: " + this.url + "\n" + "Web: " + this.nombre;
+  };
+}
+
+let unaWeb = new Web();
+unaWeb.url = "https://www.fcbarcelona.cat";
+unaWeb.nombre = "Mes que un club";
+console.log(unaWeb);
+
+let otraWeb = new Web();
+otraWeb.url = "https://tetr.io";
+otraWeb.nombre = "Tetris";
+console.log(otraWeb);
+
+Web.prototype.visitas = 2;
+Web.prototype.miFuncion = function () {
+  //prototype para poder crearlo en el constructos sino no va
+  return "funcion mia";
+};
