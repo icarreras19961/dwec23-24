@@ -471,7 +471,7 @@
 
 //Metodos de arrays
 //forEach(): Ejecuta una funcion por cada elemento del array
-const numeros = [1, 2, 3, 4, 5];
+// const numeros = [1, 2, 3, 4, 5];
 
 // const multiplica = (n) => {
 //   return n * 2;
@@ -524,7 +524,95 @@ const numeros = [1, 2, 3, 4, 5];
 // console.log(tieneNumeroPar);
 
 //every(): Comprueba si todos los elementos cumplen una condicion determinada.
-const todosNumerosPares = numeros.every((numero) => {
-  return numero % 2 === 0;
-});
-console.log(todosNumerosPares);
+// const todosNumerosPares = numeros.every((numero) => {
+//   return numero % 2 === 0;
+// });
+// console.log(todosNumerosPares);
+
+//Clases - class
+
+// class Persona {
+//   constructor(nombre) {
+//     this.nombre = nombre;
+//   }
+
+//   saludar() {
+//     console.log(
+//       "Hey muy buenas a todos guappisimos aqui ",
+//       this.nombre,
+//       " 777"
+//     );
+//   }
+// }
+
+// const ivan = new Persona("Ivan");
+// ivan.saludar();
+
+// //herencia
+// class Empleado extends Persona {
+//   constructor(nombre, salario) {
+//     super(nombre);
+//     this.salario = salario;
+//   }
+//   trabajar() {
+//     console.log(`${this.nombre} esta trabajando.`);
+//   }
+// }
+
+// const francisco = new Empleado("Francisco");
+// francisco.saludar();
+// francisco.trabajar();
+
+//Simbolos
+/**
+ * Los simbolos son una nueva clase de datos introducida por ES6.
+ * Son valores unicos que inmutables.
+ * Se pueden utilizar como identificadores de propiedades de objetos.
+ */
+
+// const id = Symbol("id");
+// const persona = {
+//   nombre: "Ivan",
+//   [id]: 1,
+// };
+
+//Iteradores
+/**
+ * Son objetos que implementan el protocolo de iteracion de JavaScript Permite recorrer y acceder a los elementos de una coleccion una a una
+ */
+
+// const numeros = [1, 2, 3, 4, 5];
+// const iterador = numeros[Symbol.iterator]();
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+// console.log(iterador.next());
+
+//SET
+/** Permite almacenar valores unicos de cualquier tipo. No permite duplicados y ofrece metodos para agregar, eliminar y verificar la existencia de elementos */
+
+// const setnumeros = new Set();
+// setnumeros.add(1);
+// setnumeros.add(2);
+// setnumeros.add(3);
+// setnumeros.add(4);
+// setnumeros.add(5);
+// setnumeros.add(6);
+// console.log(setnumeros.has(2));
+// setnumeros.delete(2);
+// console.log(setnumeros.has(2));
+// console.log(object);
+// const iteratorNumeros = setNumeros[Symbol.iterator]();
+// console.log(iteratorNumeros.next());
+
+//Map
+//**Permite almacenar pares de clave-valor, doce cada clave es ulica  y ademas permite operaciones de busqueda, insercion y eliminacion */
+
+const mapaNombres = new Map();
+mapaNombres.set("nombre", "ivan")
+mapaNombres.set("edad", 33);
+mapaNombres.set("profesion", "Desarrollador");
+
+console.log(mapaNombres.get("nombre"));
