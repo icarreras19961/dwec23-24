@@ -610,9 +610,73 @@
 //Map
 //**Permite almacenar pares de clave-valor, doce cada clave es ulica  y ademas permite operaciones de busqueda, insercion y eliminacion */
 
-const mapaNombres = new Map();
-mapaNombres.set("nombre", "ivan")
-mapaNombres.set("edad", 33);
-mapaNombres.set("profesion", "Desarrollador");
+// const mapaNombres = new Map();
+// mapaNombres.set("nombre", "ivan")
+// mapaNombres.set("edad", 33);
+// mapaNombres.set("profesion", "Desarrollador");
 
-console.log(mapaNombres.get("nombre"));
+// console.log(mapaNombres.get("nombre"));
+
+//-----------------------------------------
+//Cookies
+//-----------------------------------------
+
+/**
+ * Las cookies se utilizan para
+ * - Monitorizar la actividad de los usuarios
+ * - Mantener opciones de visualizacion o de aspecto para el usuario
+ * - Almacenar variables en el lado cliente
+ * - Identificacion o autenticacion
+ */
+
+// document.cookie = "usuario = Oreo";
+
+// function crearCookie(usuarioCookie) {
+//   console.log("Creando la cookie...");
+//   usuarioCookie += " ;expires=Tue, 7 Nov 2023 12:15:00 GMT";
+//   document.cookie = "usuario=" + encodeURIComponent(usuarioCookie);
+// }
+
+// function leerCookie() {
+//   console.log("Leyendo las cookies...");
+//   console.log(decodeURIComponent(document.cookie));
+// }
+
+//-----------------------------------------------
+//Local Storage
+//-----------------------------------------------
+/**
+ * Nos permite guardar en el navegador informacion
+ *
+ * setItem(clave, valor)
+ *
+ * getItem(clave)
+ */
+
+function guardaValores() {
+  console.log("Guardando valores en el local storage ...");
+  let usuario = {
+    nombre: "ivan",
+    apellido: "Carreras",
+  };
+  localStorage.setItem("usuario", JSON.stringify(usuario));
+}
+
+function leerValores() {
+  console.log("leyendo valores en el local storage ...");
+  let valorLocal = JSON.parse(localStorage.getItem("usuario"));
+  console.log(valorLocal == null ? "La clave no se ha encontrado" : valorLocal);
+}
+
+/**
+ * Recursividad
+ */
+
+
+function factorial(numero) {
+  if (numero == 0) return 1;
+
+  return numero * factorial(numero - 1);
+}
+
+console.log(factorial(5));
