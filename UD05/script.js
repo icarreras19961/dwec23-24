@@ -69,10 +69,35 @@
 // error.classList.add("paco");
 // error.classList.remove("error");
 
-let paras = document.getElementsByTagName("p");
-let hijo = paras[1];
-console.log(hijo);
-let padre = hijo.parentNode;
-console.log(padre);
-let primerHermano = padre.firstElementChild;
-let siguienteHermano = hijo.nextElementSibling
+// let paras = document.getElementsByTagName("p");
+// let hijo = paras[1];
+// console.log(hijo);
+// let padre = hijo.parentNode;
+// console.log(padre);
+// let primerHermano = padre.firstElementChild;
+// let siguienteHermano = hijo.nextElementSibling;
+
+//----------------------------------------------------------
+// EVENTOS
+const par = document.querySelector("p");
+
+par.addEventListener("click", (e) => {
+  // clica();
+  e.target.innerText = "texto Cambiado";
+  console.log(e.target.innerText);
+});
+
+// par.addEventListener("mouseover", () => {
+//   pasaPorEncima()
+// });
+
+// function pasaPorEncima() {
+//   console.log("Ha pasado por encima");
+// }
+
+function clica() {
+  console.log("He echo clin en el p1");
+}
+document.addEventListener("keydown", (e) => {
+  console.log("Tecla presionada: " + e.key);
+});
