@@ -79,25 +79,25 @@
 
 //----------------------------------------------------------
 // EVENTOS
-const par = document.querySelector("p");
+// const par = document.querySelector("p");
 
-par.addEventListener("click", (e) => {
-  // clica();
-  e.target.innerText = "texto Cambiado";
-  console.log(e.target.innerText);
-});
-
-// par.addEventListener("mouseover", () => {
-//   pasaPorEncima()
+// par.addEventListener("click", (e) => {
+//   // clica();
+//   e.target.innerText = "texto Cambiado";
+//   console.log(e.target.innerText);
 // });
 
-// function pasaPorEncima() {
-//   console.log("Ha pasado por encima");
-// }
+// // par.addEventListener("mouseover", () => {
+// //   pasaPorEncima()
+// // });
 
-function clica() {
-  console.log("He echo clin en el p1");
-}
-document.addEventListener("keydown", (e) => {
-  console.log("Tecla presionada: " + e.key);
-});
+// // function pasaPorEncima() {
+// //   console.log("Ha pasado por encima");
+// // }
+
+// function clica() {
+//   console.log("He echo clin en el p1");
+// }
+// document.addEventListener("keydown", (e) => {
+//   console.log("Tecla presionada: " + e.key);
+// });
