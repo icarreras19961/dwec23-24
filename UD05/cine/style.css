@@ -60,7 +60,7 @@ body {
   transform: scale(1.2);
 }
 
-.llegada .seient:not(.ocupat):hover {
+.llegenda .seient:not(.ocupat):hover {
   cursor: default;
   transform: scale(1);
 }
