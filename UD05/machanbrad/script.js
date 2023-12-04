@@ -19,3 +19,4 @@ cerrar[0].addEventListener("click", () => {
 envoltorio[0].addEventListener("click", () => {
   envoltorio[0].style.display = "none";
 });
+
